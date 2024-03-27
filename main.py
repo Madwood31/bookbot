@@ -27,9 +27,7 @@ def main():
                 # otherwise add the character and set it to 1
         # print(char_count)
 
-        def sort_on(dict):
-            return dict["num"]
-        # takes a dictionary and returns the value of the "num" key
+
 
         char_list = []
         # empty list for dictionaries.
@@ -39,6 +37,8 @@ def main():
             # creates a new dictionary for each character
             char_list.append(char_dict)
             # add the dictionary to the list
+        char_list.sort(reverse=True, key=sort_on)
+        # sorts the list in descending order (reverse=True) and using 
 
         print("--- Begin report of books/frankenstein.txt ---")
         print(f"{words_total} words found in the document")
@@ -49,7 +49,8 @@ def main():
         print("--- End report ---")
 
 
-
+def sort_on(dict):
+    return dict["num"]
 
 if __name__ == "__main__":
     main()
